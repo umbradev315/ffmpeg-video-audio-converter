@@ -1,0 +1,6 @@
+package edneyosf.ffmpeg-video-audio-converter.ffmpeg.ffmpeg.extensions
+
+fun MutableList<String>.addCmd(param: String, value: String?) = value?.let {
+    add(param)
+    add(it)
+}

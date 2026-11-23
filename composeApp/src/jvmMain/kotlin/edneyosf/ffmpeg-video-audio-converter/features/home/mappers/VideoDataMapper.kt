@@ -1,0 +1,31 @@
+package edneyosf.ffmpeg-video-audio-converter.features.home.mappers
+
+import edneyosf.ffmpeg-video-audio-converter.core.extensions.toReadableBitrate
+import edneyosf.ffmpeg-video-audio-converter.features.common.models.Video
+import edneyosf.ffmpeg-video-audio-converter.ffmpeg.data.VideoData
+
+fun List<VideoData>.toVideoList() = mapNotNull { data ->
+    if (data.width != null && data.height != null) {
+        Video(
+            codecName = data.codecName,
+            codecLongName = data.codecLongName,
+            title = data.title,
+            language = data.language,
+            profile = data.profile,
+            width = data.width,
+            height = data.height,
+            bitDepth = data.bitDepth,
+            pixFmt = data.pixFmt,
+            fps = data.fps,
+            level = data.level,
+            filmGrain = data.filmGrain,
+            displayAspectRatio = data.displayAspectRatio,
+            fieldOrder = data.fieldOrder,
+            bitRate = data.bitRate,
+            bitRateText = data.bitRate?.toReadableBitrate()
+        )
+    }
+    else {
+        null
+    }
+}

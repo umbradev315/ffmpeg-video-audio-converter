@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ffmpeg-video-audio-converter
+Comment=A user-friendly FFmpeg GUI
+Comment[pt_BR]=Uma interface gráfica para FFmpeg amigável
+Exec=ffmpeg-video-audio-converter
+Icon=io.github.edneyosf.ffmpeg-video-audio-converter
+Type=Application
+Categories=Utility
+StartupWMClass=edneyosf-ffmpeg-video-audio-converter-MainKt
